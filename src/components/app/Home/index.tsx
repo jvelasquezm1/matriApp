@@ -10,7 +10,7 @@ export default class Home extends Component {
             <img className="wedding-img" src="boda.jpg" alt="tesoro" />
           </div>
           <div className="details">
-            <h2 className="invitation">INVITACION A NUESTRA BODA</h2>
+            <h2 className="invitation">Invitacion a nuestra boda</h2>
             <img className="finger" src="dedo.png" alt="dedo" />
             <button className="link-initial">
               <Link to="/dashboard">Go</Link>

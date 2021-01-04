@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.scss";
-import Home from "./Home/Home";
-import Dashboard from "./Dashboard/Dashboard";
+import Home from "./Home";
+import Dashboard from "./Dashboard";
 
 const App: React.FC = () => {
   return (

@@ -1,137 +1,187 @@
 .app-header {
-	background-color: #282c34;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC");
 
 body {
-	font-family: 'Indie Flower', cursive !important;
-	margin: 0px;
-	padding: 0px;
+  font-family: "Dancing Script", cursive !important;
+  margin: 0px;
+  padding: 0px;
 }
 
 ::selection {
-	background: transparent;
+  background: transparent;
 }
 
 .invitation {
-	color: black;
-	text-align: center;
+  color: black;
+  text-align: center;
 }
 
 .card {
-	color: #013243;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 300px;
-	height: 400px;
-	background: #e0e1dc;
-	transform-style: preserve-3d;
-	transform: translate(-50%, -50%) perspective(2000px);
-	box-shadow: inset 300px 0 50px rgba(0, 0, 0, .5), 20px 0 60px rgba(0, 0, 0, .5);
-	transition: 1s;
+  color: #013243;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 400px;
+  background: #e0e1dc;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) perspective(2000px);
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5),
+    20px 0 60px rgba(0, 0, 0, 0.5);
+  transition: 1s;
 }
 
 .card:hover {
-	transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
-	box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5), 0 10px 100px rgba(0, 0, 0, .5);
+  transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5),
+    0 10px 100px rgba(0, 0, 0, 0.5);
 }
 
 .card:before {
-	content: '';
-	position: absolute;
-	top: -5px;
-	left: 0;
-	width: 100%;
-	height: 5px;
-	background: #BAC1BA;
-	transform-origin: bottom;
-	transform: skewX(-45deg);
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #bac1ba;
+  transform-origin: bottom;
+  transform: skewX(-45deg);
 }
 
 .card:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	right: -5px;
-	width: 5px;
-	height: 100%;
-	background: #92A29C;
-	transform-origin: left;
-	transform: skewY(-45deg);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 5px;
+  height: 100%;
+  background: #92a29c;
+  transform-origin: left;
+  transform: skewY(-45deg);
 }
 
 .card .imgBox {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	transform-origin: left;
-	transition: .7s;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: 0.7s;
 }
 
 .card .bark {
-	position: absolute;
-	background: #e0e1dc;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	transition: .7s;
+  position: absolute;
+  background: #e0e1dc;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.7s;
 }
 
 .card .imgBox img {
-	min-width: 250px;
-	max-height: 400px;
+  min-width: 250px;
+  max-height: 400px;
 }
 
 .card:hover .imgBox {
-	transform: rotateY(-135deg);
+  transform: rotateY(-135deg);
 }
 
 .card:hover .bark {
-	opacity: 1;
-	transition: .6s;
-	box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset;
+  opacity: 1;
+  transition: 0.6s;
+  box-shadow: 300px 200px 100px rgba(0, 0, 0, 0.4) inset;
 }
 
 .card .details {
-	position: absolute;
-	top: 0;
-	left: 0;
-	box-sizing: border-box;
-	padding: 0 0 0 10px;
-	z-index: -1;
-	margin-top: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 0 0 10px;
+  z-index: -1;
+  margin-top: 70px;
 }
 
 .card .details p {
-	font-size: 15px;
-	line-height: 5px;
-	transform: rotate(-10deg);
-	padding: 0 0 0 20px;
+  font-size: 15px;
+  line-height: 5px;
+  transform: rotate(-10deg);
+  padding: 0 0 0 20px;
 }
 
 .finger {
-	transform: scaleX(-1);
-	width: 50%;
-	position: absolute;
-	top: 10rem;
+  transform: scaleX(-1);
+  width: 50%;
+  position: absolute;
+  top: 10rem;
 }
 
 .wedding-img {
-	width: 100%;
+  width: 100%;
 }
 
 .link-initial {
-	position: absolute;
-	left: 12rem;
-	top: 12rem;
+  position: absolute;
+  left: 12rem;
+  top: 12rem;
+}
+
+@keyframes fadeInLeft {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 200px;
+  }
+}
+.pasto {
+  width: 100rem;
+  height: 30rem;
+  z-index: -1;
+  position: absolute;
+  object-fit: cover;
+}
+
+.hero__caption {
+  overflow: hidden;
+  span {
+    color: white;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+		position: relative;
+		margin-top: 6rem;
+    display: inline-block;
+    line-height: 2.1;
+    letter-spacing: 0.3em;
+    position: relative;
+    text-shadow: 2px 2px 2px #000000;
+    animation: fadeInLeft 2s;
+    animation-fill-mode: forwards;
+  }
+  h1 {
+    font-size: 99px;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px #000000;
+    margin-bottom: 14px;
+    color: white;
+    line-height: 1.2;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    position: relative;
+    animation: fadeInLeft 2s;
+    animation-fill-mode: forwards;
+  }
 }
