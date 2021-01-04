@@ -15,4 +15,5 @@ sketch
 build
 .env
 .vscode
+.eslintcache
 docker/dev.docker-compose.yml

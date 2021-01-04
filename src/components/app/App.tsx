@@ -1,15 +1,25 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.scss";
+import Home from "./Home/Home";
+import Dashboard from "./Dashboard/Dashboard";
 
 const App: React.FC = () => {
-	return (
-		<div className="app">
-			<header className="app-header">
-				<p>React app</p>
-			</header>
-		</div>
-	);
+  return (
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
 };
 
 export default App;

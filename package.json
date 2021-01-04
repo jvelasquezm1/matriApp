@@ -15,9 +15,10 @@
 		"docker:stop": "docker-compose -f docker/dev.docker-compose.yml down"
 	},
 	"dependencies": {
+		"@types/react-router-dom": "^5.1.7",
 		"react": "^16.10.2",
 		"react-dom": "^16.10.2",
-		"react-router-dom": "^5.1.2",
+		"react-router-dom": "^5.2.0",
 		"react-table": "^7.6.2"
 	},
 	"devDependencies": {
