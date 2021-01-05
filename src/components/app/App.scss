@@ -14,8 +14,9 @@
 
 body {
   font-family: "Dancing Script", cursive !important;
-  margin: 0px;
-  padding: 0px;
+  background-image: url("./Dashboard/assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 ::selection {
@@ -142,13 +143,15 @@ body {
   from {
     left: 0px;
   }
+
   to {
     left: 200px;
   }
 }
+
 .pasto {
   width: 100rem;
-  height: 30rem;
+  height: 40rem;
   z-index: -1;
   position: absolute;
   object-fit: cover;
@@ -156,13 +159,14 @@ body {
 
 .hero__caption {
   overflow: hidden;
+
   span {
     color: white;
     text-transform: uppercase;
     font-size: 22px;
     font-weight: 700;
-		position: relative;
-		margin-top: 6rem;
+    position: relative;
+    margin-top: 6rem;
     display: inline-block;
     line-height: 2.1;
     letter-spacing: 0.3em;
@@ -171,7 +175,8 @@ body {
     animation: fadeInLeft 2s;
     animation-fill-mode: forwards;
   }
-  h1 {
+
+  .title-card {
     font-size: 99px;
     font-weight: 700;
     text-shadow: 2px 2px 2px #000000;
@@ -184,4 +189,29 @@ body {
     animation: fadeInLeft 2s;
     animation-fill-mode: forwards;
   }
+}
+
+.memories {
+  display: flex;
+  margin-top: 21.7rem;
+  margin-bottom: 2rem;
+}
+
+.memories-video {
+  margin-left: 2rem;
+  width: 50%;
+  flex: 0 0 40rem;
+}
+
+.memories-paragraph {
+  margin-left: 4rem;
+  margin-right: 3rem;
+  text-align: center;
+}
+
+.up-button {
+  display: flex;
+  bottom: 1rem;
+  right: 1rem;
+  position: fixed;
 }
