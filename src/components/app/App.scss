@@ -28,6 +28,10 @@ body {
   text-align: center;
 }
 
+.center {
+  text-align: center;
+}
+
 .card {
   color: #013243;
   position: absolute;
@@ -151,7 +155,7 @@ body {
 
 .pasto {
   width: 100rem;
-  height: 40rem;
+  height: 50rem;
   z-index: -1;
   position: absolute;
   object-fit: cover;
@@ -193,7 +197,7 @@ body {
 
 .memories {
   display: flex;
-  margin-top: 21.7rem;
+  margin-top: 32rem;
   margin-bottom: 2rem;
 }
 
@@ -214,4 +218,12 @@ body {
   bottom: 1rem;
   right: 1rem;
   position: fixed;
+}
+
+.info {
+  text-align: center;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
 }

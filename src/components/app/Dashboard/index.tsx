@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Card from "./Cards";
 
 export default class Dashboard extends Component {
   scrollTop = () => {
@@ -14,9 +15,14 @@ export default class Dashboard extends Component {
         </h1>
         <div className="memories">
           <div className="memories-video">
-            <video width="100%" autoPlay={true} controls>
-              <source src="Boda.mp4" type="video/mp4" />
-            </video>
+            <iframe
+              title="memories-video"
+              width="608px"
+              height="342.4px"
+              src="https://www.youtube.com/embed/CNNXOD_Hr5Y?autoplay=1"
+              allow="autoplay"
+              allowFullScreen
+            ></iframe>
           </div>
           <div className="memories-paragraph">
             <h1>Nosotros</h1>
@@ -29,8 +35,26 @@ export default class Dashboard extends Component {
             </p>
           </div>
         </div>
-        <div>
-          <h2>INFO DE LA BODA</h2>
+        <h2 className="center">INFO DE LA BODA</h2>
+        <div className="info">
+          <Card
+            title="ceremonia"
+            description="front"
+            time="front"
+            image="front"
+          />
+          <Card
+            title="hospedaje"
+            description="front"
+            time="front"
+            image="front"
+          />
+          <Card
+            title="recepcion"
+            description="front"
+            time="front"
+            image="front"
+          />
         </div>
         <button className="up-button" onClick={this.scrollTop}>
           Up
