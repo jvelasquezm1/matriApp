@@ -10,13 +10,12 @@ function Card(props: ICard) {
         <div className="flip-card">
           <div className="card-front">
             {title}
-            <img className="front-img" src="tesoro.jpg" alt="img-card" />
+            <img className="front-img" src={image} alt="img-card" />
           </div>
           <div className="card-back">
             <div className="design-container">
               <p>{description}</p>
               <p>{time}</p>
-              <p>{image}</p>
             </div>
           </div>
         </div>

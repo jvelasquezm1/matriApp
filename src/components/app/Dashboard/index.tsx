@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "./Cards";
+import Form from "./Form";
 
 export default class Dashboard extends Component {
   scrollTop = () => {
@@ -41,21 +42,22 @@ export default class Dashboard extends Component {
             title="ceremonia"
             description="front"
             time="front"
-            image="front"
+            image="svg/rings.svg"
           />
           <Card
             title="hospedaje"
             description="front"
             time="front"
-            image="front"
+            image="svg/suitcase.svg"
           />
           <Card
             title="recepcion"
             description="front"
             time="front"
-            image="front"
+            image="svg/cake.svg"
           />
         </div>
+        <Form />
         <button className="up-button" onClick={this.scrollTop}>
           Up
         </button>
