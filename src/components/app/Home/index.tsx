@@ -11,7 +11,6 @@ export default class Home extends Component {
           </div>
           <div className="details">
             <h2 className="invitation">Invitacion a nuestra boda</h2>
-            <img className="finger" src="dedo.png" alt="dedo" />
             <button className="link-initial">
               <Link to="/dashboard">Go</Link>
             </button>

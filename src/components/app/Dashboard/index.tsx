@@ -3,10 +3,43 @@ import Card from "./Cards";
 import Form from "./Form";
 
 export default class Dashboard extends Component {
-  scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  state = {
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
   };
+
+  calculateTimeLeft = () => {
+    let difference = +new Date("10/07/2021") - +new Date();
+    let timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+    this.setState({
+      days: timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days,
+      hours: timeLeft.hours < 10 ? `0${timeLeft.hours}` : timeLeft.hours,
+      minutes:
+        timeLeft.minutes < 10 ? `0${timeLeft.minutes}` : timeLeft.minutes,
+      seconds:
+        timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds,
+    });
+  };
+
+  componentDidMount() {
+    this.calculateTimeLeft();
+    setInterval(this.calculateTimeLeft, 1000);
+  }
+
   render() {
+    const { days, hours, minutes, seconds } = this.state;
+
     return (
       <div className="hero__caption">
         <img className="pasto" src="pasto.jpg" alt="pasto" />
@@ -14,6 +47,7 @@ export default class Dashboard extends Component {
         <h1 className="title-card">
           Lau <strong>&</strong> Juanes
         </h1>
+        <h1 className="title-card">{`${days}: ${hours}: ${minutes}: ${seconds}`}</h1>
         <div className="memories">
           <div className="memories-video">
             <iframe
@@ -58,9 +92,6 @@ export default class Dashboard extends Component {
           />
         </div>
         <Form />
-        <button className="up-button" onClick={this.scrollTop}>
-          Up
-        </button>
       </div>
     );
   }

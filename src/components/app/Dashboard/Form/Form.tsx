@@ -43,7 +43,11 @@ export default class Form extends Component {
               placeholder="Dejanos un mensaje"
               className="form-textarea"
             ></textarea>
-            <button onClick={() => this.addGuest()} type="submit">
+            <button
+              className="confirm-button"
+              onClick={() => this.addGuest()}
+              type="submit"
+            >
               Confirmar
             </button>
           </div>
