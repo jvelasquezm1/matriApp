@@ -11,7 +11,7 @@ export default class Dashboard extends Component {
   };
 
   calculateTimeLeft = () => {
-    let difference = +new Date("10/07/2021") - +new Date();
+    let difference = +new Date("07/10/2021") - +new Date();
     let timeLeft = { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
     if (difference > 0) {
