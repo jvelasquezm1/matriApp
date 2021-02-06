@@ -42,12 +42,14 @@ export default class Dashboard extends Component {
 
     return (
       <div className="hero__caption">
-        <img className="pasto" src="pasto.jpg" alt="pasto" />
-        <span>Julio 10</span>
-        <h1 className="title-card">
-          Lau <strong>&</strong> Juanes
-        </h1>
-        <h1 className="title-card">{`${days}: ${hours}: ${minutes}: ${seconds}`}</h1>
+        {/* <img className="pasto" src="pasto.jpg" alt="pasto" /> */}
+        <div className="pasto">
+          <span>Julio 10</span>
+          <h1 className="title-card">
+            Lau <strong>&</strong> Juanes
+          </h1>
+          <h1 className="title-card">{`${days}: ${hours}: ${minutes}: ${seconds}`}</h1>
+        </div>
         <div className="memories">
           <div className="memories-video">
             <iframe

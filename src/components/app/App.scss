@@ -154,11 +154,9 @@ body {
 }
 
 .pasto {
-  width: 100rem;
-  height: 50rem;
-  z-index: -1;
-  position: absolute;
-  object-fit: cover;
+  background-image: url("./Dashboard/assets/pasto.jpg");
+  background-size: cover;
+  height: 45rem;
 }
 
 .hero__caption {
@@ -197,7 +195,7 @@ body {
 
 .memories {
   display: flex;
-  margin-top: 32rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
