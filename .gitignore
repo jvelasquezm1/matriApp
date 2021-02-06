@@ -16,4 +16,5 @@ build
 .env
 .vscode
 .eslintcache
+.firebase
 docker/dev.docker-compose.yml
