@@ -3,4 +3,5 @@ export interface ICard {
   description: string;
   time: string;
   image: string;
+  iframe: any;
 }

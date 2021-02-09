@@ -42,7 +42,6 @@ export default class Dashboard extends Component {
 
     return (
       <div className="hero__caption">
-        {/* <img className="pasto" src="pasto.jpg" alt="pasto" /> */}
         <div className="pasto">
           <span>Julio 10</span>
           <h1 className="title-card">
@@ -50,6 +49,7 @@ export default class Dashboard extends Component {
           </h1>
           <h1 className="title-card">{`${days}: ${hours}: ${minutes}: ${seconds}`}</h1>
         </div>
+        <hr />
         <div className="memories">
           <div className="memories-video">
             <iframe
@@ -72,28 +72,56 @@ export default class Dashboard extends Component {
             </p>
           </div>
         </div>
+        <hr />
         <h2 className="center">INFO DE LA BODA</h2>
         <div className="info">
           <Card
-            title="ceremonia"
-            description="front"
-            time="front"
+            title="Ceremonia"
+            description="En San Andres a definir"
+            time="A definir"
             image="svg/rings.svg"
+            iframe={
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17816.79317318093!2d-81.70399848685736!3d12.577158171568625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f05a60874e9c2e9%3A0x83960c0ad1a6052d!2sAeropuerto%20Internacional%20Gustavo%20Rojas%20Pinilla!5e0!3m2!1ses-419!2sbe!4v1612877591841!5m2!1ses-419!2sbe"
+                title="map"
+                width="250"
+                height="150"
+                aria-hidden="false"
+              ></iframe>
+            }
           />
           <Card
-            title="hospedaje"
-            description="front"
-            time="front"
+            title="Hospedaje"
+            description="En San Andres a definir"
+            time="A definir"
             image="svg/suitcase.svg"
+            iframe={
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17816.79317318093!2d-81.70399848685736!3d12.577158171568625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f05a60874e9c2e9%3A0x83960c0ad1a6052d!2sAeropuerto%20Internacional%20Gustavo%20Rojas%20Pinilla!5e0!3m2!1ses-419!2sbe!4v1612877591841!5m2!1ses-419!2sbe"
+                title="map1"
+                width="250"
+                height="150"
+              ></iframe>
+            }
           />
           <Card
-            title="recepcion"
-            description="front"
-            time="front"
+            title="Recepcion"
+            description="En San Andres a definir"
+            time="A definir"
             image="svg/cake.svg"
+            iframe={
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17816.79317318093!2d-81.70399848685736!3d12.577158171568625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f05a60874e9c2e9%3A0x83960c0ad1a6052d!2sAeropuerto%20Internacional%20Gustavo%20Rojas%20Pinilla!5e0!3m2!1ses-419!2sbe!4v1612877591841!5m2!1ses-419!2sbe"
+                title="map2"
+                width="250"
+                height="150"
+              ></iframe>
+            }
           />
         </div>
+        <hr />
         <Form />
+        <hr />
       </div>
     );
   }
