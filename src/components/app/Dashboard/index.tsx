@@ -42,7 +42,7 @@ export default class Dashboard extends Component {
 
     return (
       <div className="hero__caption">
-        <div className="pasto">
+        <div className="initial-info">
           <span>Julio 10</span>
           <h1 className="title-card">
             Lau <strong>&</strong> Juanes

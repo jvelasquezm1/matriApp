@@ -1,12 +1,23 @@
 .app-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  min-height: 100vh;
+
+  @media (min-width: 768px) {
+    background-image: url("./Dashboard/assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+::selection {
+  background: transparent;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Indie+Flower");
@@ -17,10 +28,11 @@ body {
   background-image: url("./Dashboard/assets/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
 
-::selection {
-  background: transparent;
+  @media (min-width: 768px) {
+    margin: 0px;
+    padding: 0px;
+  }
 }
 
 .invitation {
@@ -45,6 +57,10 @@ body {
   box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5),
     20px 0 60px rgba(0, 0, 0, 0.5);
   transition: 1s;
+
+  @media (min-width: 768px) {
+    margin-left: 10rem;
+  }
 }
 
 .card:hover {
@@ -114,16 +130,12 @@ body {
   top: 0;
   left: 0;
   box-sizing: border-box;
-  padding: 0 0 0 10px;
+  padding: 1rem;
   z-index: -1;
-  margin-top: 70px;
-}
 
-.card .details p {
-  font-size: 15px;
-  line-height: 5px;
-  transform: rotate(-10deg);
-  padding: 0 0 0 20px;
+  a {
+    margin-left: 6.5rem;
+  }
 }
 
 .finger {
@@ -137,12 +149,6 @@ body {
   width: 100%;
 }
 
-.link-initial {
-  position: absolute;
-  left: 12rem;
-  top: 12rem;
-}
-
 @keyframes fadeInLeft {
   from {
     left: 0px;
@@ -153,7 +159,7 @@ body {
   }
 }
 
-.pasto {
+.initial-info {
   background-image: url("./Dashboard/assets/pasto.jpg");
   background-size: cover;
   height: 45rem;

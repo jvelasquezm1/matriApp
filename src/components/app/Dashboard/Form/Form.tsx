@@ -6,15 +6,12 @@ export default class Form extends Component {
   state = {
     name: "",
     email: "",
-    guests: 0,
     message: "",
   };
 
   addGuest = () => {
-    const { name, email, guests, message } = this.state;
-    addGuests(name, email, guests, message).then(() =>
-      console.log("OK")
-    );
+    const { name, email, message } = this.state;
+    addGuests(name, email, 0, message).then(() => console.log("OK"));
   };
 
   handleName(event: any) {
@@ -34,8 +31,8 @@ export default class Form extends Component {
   }
 
   render() {
-    const { name, email, guests, message } = this.state;
-  
+    const { name, email, message } = this.state;
+
     return (
       <div className="contact-form">
         <div className="form-wrapper">
@@ -58,19 +55,6 @@ export default class Form extends Component {
               onChange={(e) => this.handleEmail(e)}
               placeholder="Email"
             />
-            <select
-              className="form-input form-select"
-              name="select"
-              id="select2"
-              value={guests}
-              onChange={(e) => this.handleGuests(e)}
-            >
-              <option value="0">Sin invitados</option>
-              <option value="1">1 Invitado</option>
-              <option value="2">2 Invitados</option>
-              <option value="3">3 Invitados</option>
-              <option value="4">4 Invitados</option>
-            </select>
             <textarea
               name="message"
               id="message"
