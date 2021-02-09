@@ -61,6 +61,9 @@ export default class Dashboard extends Component {
               allowFullScreen
             ></iframe>
           </div>
+          <h2 className="memories-video-mobile">
+            <a href="https://youtu.be/CNNXOD_Hr5Y">Video de invitacion</a>
+          </h2>
           <div className="memories-paragraph">
             <h1>Nosotros</h1>
             <img width="40%" src="ornament.png" alt="ornament" />
@@ -118,6 +121,17 @@ export default class Dashboard extends Component {
               ></iframe>
             }
           />
+        </div>
+        <div className="info-mobile">
+          <h2>Ceremonia: </h2>
+          <p>Por definir</p>
+          <a href="https://goo.gl/maps/wMfVxEvLUAPecajq5">Mapa</a>
+          <h2>Hospedaje: </h2>
+          <p>Por definir</p>
+          <a href="https://goo.gl/maps/wMfVxEvLUAPecajq5">Mapa</a>
+          <h2>Recepcion: </h2>
+          <p>Por definir</p>
+          <a href="https://goo.gl/maps/wMfVxEvLUAPecajq5">Mapa</a>
         </div>
         <hr />
         <Form />

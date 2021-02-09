@@ -155,24 +155,39 @@ body {
   }
 
   to {
-    left: 12.5rem;
+    left: 4.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes fadeInLeft {
+    from {
+      left: 0rem;
+    }
+
+    to {
+      left: 12.5rem;
+    }
   }
 }
 
 .initial-info {
-  background-image: url("./Dashboard/assets/pasto.jpg");
-  background-size: cover;
-  height: 45rem;
+  @media (min-width: 768px) {
+    background-image: url("./Dashboard/assets/pasto.jpg");
+    background-size: cover;
+    height: 45rem;
+  }
 }
 
 .hero__caption {
   overflow: hidden;
+  width: 100vw;
 
   span {
     color: white;
     text-transform: uppercase;
-    font-size: 1.375rem;
     font-weight: 700;
+    font-size: 1.375rem;
     position: relative;
     margin-top: 6rem;
     display: inline-block;
@@ -185,7 +200,7 @@ body {
   }
 
   .title-card {
-    font-size: 6.25rem;
+    font-size: 2rem;
     font-weight: 700;
     text-shadow: 0.125rem 0.125rem 0.125rem #000000;
     margin-bottom: 0.875rem;
@@ -196,19 +211,46 @@ body {
     position: relative;
     animation: fadeInLeft 2s;
     animation-fill-mode: forwards;
+
+    @media (min-width: 768px) {
+      font-size: 6.25rem;
+    }
   }
 }
 
 .memories {
-  display: flex;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  display: block;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .memories-video {
-  margin-left: 2rem;
-  width: 50%;
-  flex: 0 0 40rem;
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    margin-left: 2rem;
+    width: 50%;
+    flex: 0 0 40rem;
+  }
+}
+
+.memories-video-mobile {
+  text-align: center;
+
+  a {
+    color: white;
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .memories-paragraph {
@@ -223,4 +265,16 @@ body {
   display: flex;
   justify-content: space-around;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.info-mobile {
+  text-align: center;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
