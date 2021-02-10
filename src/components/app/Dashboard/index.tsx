@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import Card from "./Cards";
 import Form from "./Form";
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
+} from "@material-ui/core";
 
 export default class Dashboard extends Component {
   state = {
@@ -8,6 +15,7 @@ export default class Dashboard extends Component {
     hours: 0,
     minutes: 0,
     seconds: 0,
+    confirmModal: false,
   };
 
   calculateTimeLeft = () => {
@@ -22,6 +30,7 @@ export default class Dashboard extends Component {
         seconds: Math.floor((difference / 1000) % 60),
       };
     }
+
     this.setState({
       days: timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days,
       hours: timeLeft.hours < 10 ? `0${timeLeft.hours}` : timeLeft.hours,
@@ -30,6 +39,14 @@ export default class Dashboard extends Component {
       seconds:
         timeLeft.seconds < 10 ? `0${timeLeft.seconds}` : timeLeft.seconds,
     });
+  };
+
+  handleOpen = () => {
+    this.setState({ confirmModal: true });
+  };
+
+  handleClose = () => {
+    this.setState({ confirmModal: false });
   };
 
   componentDidMount() {
@@ -65,14 +82,20 @@ export default class Dashboard extends Component {
             <a href="https://youtu.be/CNNXOD_Hr5Y">Video de invitacion</a>
           </h2>
           <div className="memories-paragraph">
-            <h1>Nosotros</h1>
             <img width="40%" src="ornament.png" alt="ornament" />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-              animi reiciendis, ducimus voluptate a ex, velit sint eveniet dicta
-              ab corporis doloribus libero omnis et recusandae alias fuga
-              voluptatem. Maxime?
+              Había una vez un chico y una chica en un hermoso país que se
+              hicieron amigos y por mucho fueron los mejores amigos (Para los
+              que los conocían). La chica se fue para un país muy muy lejano y
+              ahora su novio (Mejor amigo) vino donde ella estaba 2 años
+              después, al parecer ser mejores amigos (novios) no fue suficiente
+              y quisieron crear un momento inolvidable con las personas mas
+              importantes para ellos. Este no es el fin de la historia, solo es
+              el comienzo… Si estas leyendo esto, eres una de estas personas
+              especiales.
             </p>
+            <h3>¿Quieres ser parte de la historia? </h3>
+            <h3>TE ESPERAMOS</h3>
           </div>
         </div>
         <hr />
@@ -95,17 +118,12 @@ export default class Dashboard extends Component {
           />
           <Card
             title="Hospedaje"
-            description="En San Andres a definir"
-            time="A definir"
+            description="En este hermoso lugar hay muchos lugares
+            donde se puedan quedar, te dejamos a continuacion algunas recomendaciones
+            que quizas te puedan interesar"
+            time=""
             image="svg/suitcase.svg"
-            iframe={
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17816.79317318093!2d-81.70399848685736!3d12.577158171568625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f05a60874e9c2e9%3A0x83960c0ad1a6052d!2sAeropuerto%20Internacional%20Gustavo%20Rojas%20Pinilla!5e0!3m2!1ses-419!2sbe!4v1612877591841!5m2!1ses-419!2sbe"
-                title="map1"
-                width="250"
-                height="150"
-              ></iframe>
-            }
+            iframe="Hotel ..."
           />
           <Card
             title="Recepcion"
@@ -134,7 +152,24 @@ export default class Dashboard extends Component {
           <a href="https://goo.gl/maps/wMfVxEvLUAPecajq5">Mapa</a>
         </div>
         <hr />
-        <Form />
+        <Form openConfirModal={this.handleOpen} />
+        <Dialog
+          open={this.state.confirmModal}
+          onClose={this.handleClose}
+          aria-labelledby="form-dialog-title"
+          fullWidth
+        >
+          <DialogTitle id="form-dialog-title">Confirmado</DialogTitle>
+          <DialogContent>
+            Gracias por confirmar, nos vemos en San Andres para seguir haciendo
+            historia
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={this.handleClose} color="primary">
+              Cerrar
+            </Button>
+          </DialogActions>
+        </Dialog>
         <hr />
       </div>
     );

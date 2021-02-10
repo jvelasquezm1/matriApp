@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Form.scss";
 import { addGuests } from "src/services/guest.service";
 
-export default class Form extends Component {
+export default class Form extends Component<{ openConfirModal: any }> {
   state = {
     name: "",
     email: "",
@@ -11,7 +11,9 @@ export default class Form extends Component {
 
   addGuest = () => {
     const { name, email, message } = this.state;
-    addGuests(name, email, 0, message).then(() => console.log("OK"));
+    addGuests(name, email, 0, message).then((data) =>
+      data.status ? this.props.openConfirModal() : console.log("error")
+    );
   };
 
   handleName(event: any) {
@@ -65,7 +67,7 @@ export default class Form extends Component {
             ></textarea>
             <button
               className="confirm-button"
-              onClick={() => this.addGuest()}
+              onClick={() => this.addGuest(this.props)}
               type="submit"
             >
               Confirmar

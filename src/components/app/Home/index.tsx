@@ -5,8 +5,7 @@ export default class Home extends Component {
   getGuest = () => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString) as any;
-    const guest = urlParams.get("guest");
-    return guest ? guest.charAt(0).toUpperCase() + guest.slice(1) : "";
+    return urlParams.get("guest");
   };
   render() {
     return (
