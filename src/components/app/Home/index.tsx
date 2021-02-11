@@ -15,8 +15,8 @@ export default class Home extends Component {
             <img className="wedding-img" src="boda.jpg" alt="tesoro" />
           </div>
           <div className="details">
-            <h2 className="invitation">Invitacion a nuestra boda</h2>
-            <h2 className="invitation">{this.getGuest()}</h2>
+            <h2 className="invitation">Invitación a nuestra boda</h2>
+            <h4 className="invitation">Invitado: {this.getGuest()}</h4>
             <Link to="/dashboard">
               <img width="20%" src="sign.png" alt="sign" />
             </Link>

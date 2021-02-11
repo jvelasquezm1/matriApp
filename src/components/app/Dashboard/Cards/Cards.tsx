@@ -14,7 +14,7 @@ function Card(props: ICard) {
           </div>
           <div className="card-back">
             <div className="design-container">
-              <p>{description}</p>
+              <p className="description">{description}</p>
               <p>{time}</p>
               {iframe}
             </div>

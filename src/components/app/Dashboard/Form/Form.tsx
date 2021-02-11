@@ -7,6 +7,7 @@ export default class Form extends Component<{ openConfirModal: any }> {
     name: "",
     email: "",
     message: "",
+    disableConfirm: true,
   };
 
   addGuest = () => {
@@ -17,7 +18,7 @@ export default class Form extends Component<{ openConfirModal: any }> {
   };
 
   handleName(event: any) {
-    this.setState({ name: event.target.value });
+    this.setState({ name: event.target.value, disableConfirm: false });
   }
 
   handleEmail(event: any) {
@@ -67,7 +68,8 @@ export default class Form extends Component<{ openConfirModal: any }> {
             ></textarea>
             <button
               className="confirm-button"
-              onClick={() => this.addGuest(this.props)}
+              disabled={this.state.disableConfirm}
+              onClick={() => this.addGuest()}
               type="submit"
             >
               Confirmar

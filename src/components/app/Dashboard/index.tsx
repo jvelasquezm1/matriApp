@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from "react";
 import Card from "./Cards";
 import Form from "./Form";
@@ -78,12 +79,12 @@ export default class Dashboard extends Component {
               allowFullScreen
             ></iframe>
           </div>
-          <h2 className="memories-video-mobile">
+          <h2 className="memories-video-mobile fs-l">
             <a href="https://youtu.be/CNNXOD_Hr5Y">Video de invitacion</a>
           </h2>
           <div className="memories-paragraph">
             <img width="40%" src="ornament.png" alt="ornament" />
-            <p>
+            <p className="fs-l">
               Había una vez un chico y una chica en un hermoso país que se
               hicieron amigos y por mucho fueron los mejores amigos (Para los
               que los conocían). La chica se fue para un país muy muy lejano y
@@ -103,8 +104,8 @@ export default class Dashboard extends Component {
         <div className="info">
           <Card
             title="Ceremonia"
-            description="En San Andres a definir"
-            time="A definir"
+            description="San Andres"
+            time="Por confirmar"
             image="svg/rings.svg"
             iframe={
               <iframe
@@ -118,26 +119,77 @@ export default class Dashboard extends Component {
           />
           <Card
             title="Hospedaje"
-            description="En este hermoso lugar hay muchos lugares
-            donde se puedan quedar, te dejamos a continuacion algunas recomendaciones
-            que quizas te puedan interesar"
-            time=""
+            description="Tenemos algunas recomendaciones
+              para tu viaje y estadía, si ninguna te convence
+              y prefieres buscar por tu cuenta es perfecto también!
+              Lo importante es poder verte allá"
+            time={
+              <div className="options">
+                <a
+                  href="https://www.instagram.com/p/CH2z9NFAcVX/?igshid=gmbcrnletiix"
+                  target="_blank"
+                >
+                  Opcion 1
+                </a>
+                <a
+                  href="https://www.instagram.com/p/CCRk0fPgxg0/?igshid=xs2t94mv5qyn"
+                  target="_blank"
+                >
+                  Opción 2
+                </a>
+                <a
+                  href="https://www.instagram.com/p/CKhfJYCgo1L/?igshid=s2jzsbqpepcb"
+                  target="_blank"
+                >
+                  Opción 3
+                </a>
+              </div>
+            }
             image="svg/suitcase.svg"
-            iframe="Hotel ..."
+            iframe=""
           />
+        </div>
+        <div className="info">
           <Card
             title="Recepcion"
-            description="En San Andres a definir"
-            time="A definir"
+            description="San Andres - Hotel arena blanca"
+            time="Cra. 1 #2-1, San Andrés y Providencia, Colombia"
             image="svg/cake.svg"
             iframe={
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17816.79317318093!2d-81.70399848685736!3d12.577158171568625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f05a60874e9c2e9%3A0x83960c0ad1a6052d!2sAeropuerto%20Internacional%20Gustavo%20Rojas%20Pinilla!5e0!3m2!1ses-419!2sbe!4v1612877591841!5m2!1ses-419!2sbe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3894.0222997551123!2d-81.69193168569902!3d12.580781226738361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f05a60f51e4b281%3A0x1713ec72c9959574!2sHotel%20Arena%20Blanca!5e0!3m2!1ses-419!2sbe!4v1613051510356!5m2!1ses-419!2sbe"
                 title="map2"
                 width="250"
                 height="150"
               ></iframe>
             }
+          />
+          <Card
+            title="Vestimenta"
+            description={
+              <div>
+                <p>
+                  Para esta ocasión especial tendremos diferentes actividades,
+                  será una boda muy fuera de lo común ... Qué debes traer?
+                </p>
+                <p>
+                  <strong>Hombres:</strong> Guayabera para la ceremonia y camisa
+                  blanca y pantalón corto para la recepción
+                </p>
+                <p>
+                  <strong>Mujeres:</strong> vestido formal para playa y vestido
+                  blanco para la recepcion
+                </p>
+                <p>
+                  La recepcion será en la noche y es importante que todos estén
+                  de blanco... Así que escoge tu mejor outfit y ¡¡Prepárate para
+                  divertirte!!
+                </p>
+              </div>
+            }
+            time=""
+            image="svg/blazer.svg"
+            iframe=""
           />
         </div>
         <div className="info-mobile">
@@ -145,11 +197,54 @@ export default class Dashboard extends Component {
           <p>Por definir</p>
           <a href="https://goo.gl/maps/wMfVxEvLUAPecajq5">Mapa</a>
           <h2>Hospedaje: </h2>
-          <p>Por definir</p>
-          <a href="https://goo.gl/maps/wMfVxEvLUAPecajq5">Mapa</a>
+          <p>
+            Tenemos algunas recomendaciones para tu viaje y estadía, si ninguna
+            te convence y prefieres buscar por tu cuenta es perfecto también! Lo
+            importante es poder verte allá
+          </p>
+          <div className="options">
+            <a
+              href="https://www.instagram.com/p/CH2z9NFAcVX/?igshid=gmbcrnletiix"
+              target="_blank"
+            >
+              Opcion 1
+            </a>
+            <a
+              href="https://www.instagram.com/p/CCRk0fPgxg0/?igshid=xs2t94mv5qyn"
+              target="_blank"
+            >
+              Opción 2
+            </a>
+            <a
+              href="https://www.instagram.com/p/CKhfJYCgo1L/?igshid=s2jzsbqpepcb"
+              target="_blank"
+            >
+              Opción 3
+            </a>
+          </div>
           <h2>Recepcion: </h2>
-          <p>Por definir</p>
-          <a href="https://goo.gl/maps/wMfVxEvLUAPecajq5">Mapa</a>
+          <p>San Andres - Hotel arena blanca (Cra. 1 #2-1)</p>
+          <a href="https://g.page/hotelarenablanca?share">Mapa</a>
+          <h2>Vestimenta: </h2>
+          <div>
+            <p>
+              Para esta ocasión especial tendremos diferentes actividades, será
+              una boda muy fuera de lo común ... Qué debes traer?
+            </p>
+            <p>
+              <strong>Hombres:</strong> Guayabera para la ceremonia y camisa
+              blanca y pantalón corto para la recepción
+            </p>
+            <p>
+              <strong>Mujeres:</strong> vestido formal para playa y vestido
+              blanco para la recepcion
+            </p>
+            <p>
+              La recepcion será en la noche y es importante que todos estén de
+              blanco... Así que escoge tu mejor outfit y ¡¡Prepárate para
+              divertirte!!
+            </p>
+          </div>
         </div>
         <hr />
         <Form openConfirModal={this.handleOpen} />
