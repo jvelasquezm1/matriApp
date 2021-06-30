@@ -18,7 +18,7 @@ export default class Home extends Component {
             <h2 className="invitation">Invitación a nuestra boda</h2>
             <h4 className="invitation">Invitado: {this.getGuest()}</h4>
             <Link to="/dashboard">
-              <img width="20%" src="sign.png" alt="sign" />
+              <p>Click aqui para ver información</p>
             </Link>
           </div>
         </div>

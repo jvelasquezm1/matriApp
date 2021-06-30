@@ -16,6 +16,23 @@
   }
 }
 
+.dark-banner {
+  position: absolute;
+  background-color: #000000cc;
+  width: 70rem;
+  height: 77rem;
+  z-index: 1;
+}
+
+.p-banner {
+  margin-top: 1rem;
+  background: white;
+  margin: 10rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 2.5rem;
+}
+
 ::selection {
   background: transparent;
 }

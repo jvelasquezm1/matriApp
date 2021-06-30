@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, { Component } from "react";
 import Card from "./Cards";
-import Form from "./Form";
 import {
   Dialog,
   DialogTitle,
@@ -102,6 +101,15 @@ export default class Dashboard extends Component {
         <hr />
         <h2 className="center">INFO DE LA BODA</h2>
         <div className="info">
+          <div className="dark-banner">
+            <p className="p-banner">
+              Lo sentimos mucho pero el coronavirus nos obliga a tener un numero
+              reservado de invitados presenciales el cual ya llego a su limite,
+              pronto estaremos enviando un link para que nos puedas acompañar
+              desde zoom
+            </p>
+          </div>
+
           <Card
             title="Ceremonia"
             description="San Andres"
@@ -247,7 +255,6 @@ export default class Dashboard extends Component {
           </div>
         </div>
         <hr />
-        <Form openConfirModal={this.handleOpen} />
         <Dialog
           open={this.state.confirmModal}
           onClose={this.handleClose}
